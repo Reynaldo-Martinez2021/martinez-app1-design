@@ -20,7 +20,7 @@
    <rowConstraints>
       <RowConstraints maxHeight="75.0" minHeight="1.0" prefHeight="75.0" />
       <RowConstraints maxHeight="1.7976931348623157E308" minHeight="0.0" percentHeight="0.0" prefHeight="15.0" />
-      <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
       <RowConstraints fillHeight="false" maxHeight="257.0" minHeight="10.0" prefHeight="225.0" />
       <RowConstraints fillHeight="false" maxHeight="1.7976931348623157E308" minHeight="1.0E-4" prefHeight="46.0" />
    </rowConstraints>
@@ -35,9 +35,26 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField promptText="Enter A Category" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <DatePicker promptText="Enter a Due Date" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <TextField prefHeight="25.0" prefWidth="235.0" promptText="Enter a title" />
+            <TextField fx:id="newTaskPriority" promptText="Enter Priority (High, Medium, Low)" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="10.0" right="21.0" />
+               </GridPane.margin>
+            </TextField>
+            <DatePicker fx:id="newTaskDueDate" prefHeight="25.0" prefWidth="230.0" promptText="Enter a Due Date" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="12.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="newTaskTitle" prefHeight="25.0" prefWidth="230.0" promptText="Enter a title">
+               <GridPane.margin>
+                  <Insets left="5.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="newTaskCategory" layoutX="10.0" layoutY="88.0" prefHeight="25.0" prefWidth="230.0" promptText="Enter A Category" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
          </children>
       </GridPane>
       <GridPane prefWidth="480.0" GridPane.columnIndex="1">
@@ -52,16 +69,22 @@
                <font>
                   <Font name="Arial Black" size="38.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
          </children>
       </GridPane>
-      <Separator prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="64.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+      <Separator prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin></Separator>
+      <Button fx:id="newTaskSave" mnemonicParsing="false" prefHeight="28.0" prefWidth="64.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets right="15.0" />
          </GridPane.margin>
       </Button>
-      <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Enter a description" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextArea fx:id="newTaskDescription" prefHeight="200.0" prefWidth="200.0" promptText="Enter a description" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
