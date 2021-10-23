@@ -1,2 +1,5 @@
-/.gradle
-/.idea
+**/.gradle/
+**/.idea/
+**/data/
+**/build/
+**/build/classes/java/main/
