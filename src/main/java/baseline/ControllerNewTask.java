@@ -39,12 +39,12 @@ public class ControllerNewTask {
     private TextField newTaskToDo; // Value injected by FXMLLoader
 
     @FXML
-    void SetEditItem(MouseEvent event) {
+    public void SetEditItem(MouseEvent event) {
         //call the EditItem class for further processing
     }
 
     @FXML
-    void SaveTask(MouseEvent event) {
+    public void SaveTask(MouseEvent event) {
         //call the SaveTask class for further processing
     }
 

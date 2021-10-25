@@ -18,12 +18,12 @@ public class ControllerEditToDoItem {
     private TextArea editToDoItem; // Value injected by FXMLLoader
 
     @FXML
-    void SaveToDoEdit(MouseEvent event) {
+    public void SaveToDoEdit(MouseEvent event) {
         //call the saveToDoEdit class for further processing
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
+    public void initialize() {
         assert editToDoItem != null : "fx:id=\"editToDoItem\" was not injected: check your FXML file 'Untitled'.";
 
     }

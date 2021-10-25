@@ -39,17 +39,17 @@ public class ControllerEditTask {
     private TextField editTaskToDo; // Value injected by FXMLLoader
 
     @FXML
-    void SetEditItem(MouseEvent event) {
+    public void SetEditItem(MouseEvent event) {
         //call the EditItem class for further processing
     }
 
     @FXML
-    void SaveTask(MouseEvent event) {
+    public void SaveTask(MouseEvent event) {
         //call the saveTask for further processing
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
+    public void initialize() {
         assert editTaskDescription != null : "fx:id=\"editTaskDescription\" was not injected: check your FXML file 'EditTask.fxml'.";
         assert editTaskDueDate != null : "fx:id=\"editTaskDueDate\" was not injected: check your FXML file 'EditTask.fxml'.";
         assert editTaskTitle != null : "fx:id=\"editTaskTitle\" was not injected: check your FXML file 'EditTask.fxml'.";
