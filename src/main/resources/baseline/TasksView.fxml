@@ -73,7 +73,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Add Task" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                              <Button fx:id="addTaskButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Add Task" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                                  <GridPane.margin>
                                     <Insets right="30.0" />
                                  </GridPane.margin>
@@ -100,11 +100,11 @@
                      <children>
                         <TableView editable="true" prefHeight="324.0" prefWidth="638.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
-                              <TableColumn prefWidth="200.0" text="Category" />
-                              <TableColumn prefWidth="100.0" text="Task Title" />
-                              <TableColumn prefWidth="100.0" text="Due Date" />
-                              <TableColumn prefWidth="100.0" text="Priority" />
-                              <TableColumn prefWidth="97.0" text="Completed" />
+                              <TableColumn fx:id="taskViewCategory" prefWidth="200.0" text="Category" />
+                              <TableColumn fx:id="taskViewTaskTitle" prefWidth="100.0" text="Task Title" />
+                              <TableColumn fx:id="taskViewDueDate" prefWidth="100.0" text="Due Date" />
+                              <TableColumn fx:id="taskViewPriority" prefWidth="100.0" text="Priority" />
+                              <TableColumn fx:id="taskViewCompleted" prefWidth="97.0" text="Completed" />
                            </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
