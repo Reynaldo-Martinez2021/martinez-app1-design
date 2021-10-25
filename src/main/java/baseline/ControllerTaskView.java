@@ -106,8 +106,7 @@ public class ControllerTaskView {
     }
 
     public void SetNewTask(javafx.event.ActionEvent actionEvent) {
-        SetNewTask setNewTask = new SetNewTask();
-        setNewTask.start(actionEvent);
+        //call the setNewTask Class
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
