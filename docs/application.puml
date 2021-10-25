@@ -1,0 +1,146 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Application{
+}
+class ControllerEditTask{
+-private ResourceBundle resources
+-private URL location
+-private TextField editTaskDescription
+-private DatePicker editTaskDueDate
+-private TextField editTaskTitle
+-private TextField editTaskPriority
+-private Button editTaskSave
+-private TableView<?> editTaskTable
+-private TextField editTaskToDo
++SetEditItem(MouseEvent)
++SaveTask(MouseEvent)
++initialize()
+}
+class ControllerEditToDoItem{
+-private ResourceBundle resources
+-private URL location
+-private TextArea editToDoItem
++SaveToDoEdit(MouseEvent)
++initialize()
+}
+class ControllerNewTask{
+-private ResourceBundle resources
+-private URL location
+-private TextField newTaskDescription
+-private DatePicker newTaskDueDate
+-private TextField newTaskTitle
+-private TextField newTaskPriority
+-private Button editTaskSave
+-private TableView<?> newTaskTable
+-private TextField newTaskToDo
++public void SetEditItem(MouseEvent)
++public void SaveTask(MouseEvent)
++initialize()
+}
+
+class ControllerTaskView{
+-private ResourceBundle resources
+-private URL location
+-private Menu menuFile
+-private MenuItem menuItemNew
+-private MenuItem menuItemOpen
+-private Menu menuItemOpenRecent
+-private MenuItem menuItemClose
+-private MenuItem menuItemSave
+-private MenuItem menuItemSaveAs
+-private Menu menuEdit
+-private MenuItem menuEditUndo
+-private MenuItem menuEditRedo
+-private MenuItem menuEditCut
+-private MenuItem menuEditCopy
+-private MenuItem menuEditPaste
+-private MenuItem menuEditDelete
+-private MenuItem menuEditSelectAll
+-private MenuItem menuEditUnselectAll
+-private Menu menuHelp
+-private MenuItem menuHelpAbout
+-private Button addTaskButton
+-private TableView<?> taskTableView
+-private TableColumn<?, ?> taskViewTaskTitle
+-private TableColumn<?, ?> taskViewTaskDescription
+-private TableColumn<?, ?> taskViewPriority
+-private TableColumn<?, ?> taskViewDueDate
+-private TableColumn<?, ?> taskViewCompleted
++public void SetEditTask(MouseEvent)
++public void NewTask(ActionEvent)
++public void SetNewTask(javafx.event.ActionEvent)
++void initialize()
+}
+
+class CreateTaskObject{
++public Object createTask():Object
+}
+class PopulateTaskView{
++public void populateTaskView(Object)
+}
+class SaveTask{
++public void saveChanges()
+}
+
+class SaveTaskApp{
++public void saveCurrentList()
+}
+class SaveToDoEdit{
++public Object updateToDoItem():Object
+}
+
+class SetEditItem{
++public void handleMouseClick()
++public void setEditItemStage()
+}
+
+class SetEditTask{
++public void startEditTaskScene()
+}
+
+class SetNewTask{
++public void start(ActionEvent)
+}
+
+class TaskFields{
+-private String taskTitle
+-private String taskPriority
+-private Date taskDueDate
+-private String taskDescription
+
++public String getTaskTitle()
++public void setTaskTitle(String):String
++public String getTaskPriority()
++public void setTaskPriority(String):String
++public Date getTaskDueDate()
++public void setTaskDueDate(Date):Date
++public String getTaskDescription()
++public void setTaskDescription(String):String
+}
+
+class ToDoItem{
+-private String toDoItem
+-private List<String> toDoItemList
++public List<String> getToDoItemList():List<String>
++public String getToDoItem():String
++public void setToDoItem(String)
++public void updateList(String)
+}
+
+ControllerTaskView -->SetEditTask
+ControllerTaskView -->SetNewTask
+
+SetNewTask-->SaveTask
+SaveTask-->PopulateTaskView
+
+SetNewTask-->SetEditItem
+SetEditItem-->SaveToDoEdit
+
+SetEditTask-->SaveTask
+SaveTask-->PopulateTaskView
+
+SetEditTask-->SetEditItem
+SetEditItem-->SaveToDoEdit
+
+@enduml
