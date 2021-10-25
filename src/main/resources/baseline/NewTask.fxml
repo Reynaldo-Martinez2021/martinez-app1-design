@@ -81,12 +81,12 @@
             </Separator>
          </children>
       </GridPane>
-      <Button fx:id="editTaskSave" mnemonicParsing="false" prefHeight="28.0" prefWidth="64.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+      <Button fx:id="editTaskSave" mnemonicParsing="false" onMouseClicked="#SaveTask" prefHeight="28.0" prefWidth="64.0" text="Save" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets right="15.0" />
          </GridPane.margin>
       </Button>
-      <TableView fx:id="newTaskTable" prefHeight="204.0" prefWidth="480.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <TableView fx:id="newTaskTable" onMouseClicked="#SetEditItem" prefHeight="204.0" prefWidth="480.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <columns>
             <TableColumn prefWidth="103.0" text="Completed" />
             <TableColumn prefWidth="376.0" text="Task" />
