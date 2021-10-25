@@ -1,5 +1,6 @@
 package baseline;
 
+import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class ControllerTaskView {
 
@@ -99,9 +101,13 @@ public class ControllerTaskView {
     }
 
     @FXML
-    void SetNewTask(MouseEvent event) {
-        //call the SetNewTask for further processing
+    public void NewTask(ActionEvent event) {
+        //call the setNewTask
+    }
 
+    public void SetNewTask(javafx.event.ActionEvent actionEvent) {
+        SetNewTask setNewTask = new SetNewTask();
+        setNewTask.start(actionEvent);
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
